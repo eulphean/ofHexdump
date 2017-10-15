@@ -9,11 +9,13 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
   
+    void keyPressed(int key);
+  
+    void calcRGBTexture();
+  
     // Input file.
-    ofFile inputFile1;
-    ofFile inputFile2;
-    vector<int> decimals1;
-    vector<int> decimals2;
+    ofFile inputFile;
+    vector<int> decimals;
   
     // Maximum and minimum.
     int maxDecimal;
@@ -23,10 +25,16 @@ class ofApp : public ofBaseApp{
     ofPath myPath;
   
     // ofPixels
-    ofPixels pixels;
+    ofPixels rPixels;
+    ofPixels gPixels;
+    ofPixels bPixels;
+    ofPixels rgbPixels;
   
-    // Texture
-  ofTexture texture;
+    // All the textures
+    ofTexture redTexture;
+    ofTexture greenTexture;
+    ofTexture blueTexture;
+    ofTexture rgbTexture;
   
     // 3D Camera
     ofEasyCam cam;
